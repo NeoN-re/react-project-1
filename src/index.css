@@ -1,0 +1,171 @@
+:root {
+  --bg-color: #121214;
+  --card-bg: #1a1a1e;
+  --accent-color: #ffb703;
+  --accent-hover: #fb8500;
+  --text-main: #ffffff;
+  --text-muted: #adb5bd;
+  --danger: #e63946;
+  --success: #2a9d8f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #2a2a30;
+  color: #fff;
+  outline: none;
+  width: 200px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color);
+}
+
+.balance-box {
+  background: #2a2a30;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.balance-amount {
+  color: var(--accent-color);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-action {
+  background-color: #3a3a42;
+  color: #fff;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-action:hover {
+  background-color: #4a4a54;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.game-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-card h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.game-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.game-interface {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #2a2a30;
+  text-align: center;
+}
+
+.slots-display {
+  font-size: 36px;
+  letter-spacing: 10px;
+  margin: 15px 0;
+  background: #121214;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dice-display {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.hilo-card {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.hilo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.game-status {
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+.status-win { color: var(--success); }
+.status-lose { color: var(--danger); }
